@@ -1,0 +1,28 @@
+doctype html
+html(lang="ru")
+    - const name = "Случайный котик";
+    include head
+    script(src="../../scripts/commentLoad.js")
+    script(src="../../scripts/comment.js")
+    body
+        include authform
+        include header
+        include navigation
+        main(class="l-main")
+            .l-content
+                p#id-place #{id}
+                .l-gallery
+                    .photo-item(class = "gallery-item gallery-item-is-shadowed", style=`background-image: url(${image})`)
+                .l-comment
+                .l-comment-form
+                    #comment-place
+                        p Комментарий:
+                        textarea#comment-input
+                        button(type='button' onclick='upload()') Отправить
+                .l-preloader
+                    img#load-gif(src="../../gifs/loadsnoop.gif" style="height: 240px; width: 120px")
+                .l-sidebar
+                    p
+                        img(src="../../cats/10.jpg")
+        include navigation
+        include footer

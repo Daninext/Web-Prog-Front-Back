@@ -1,0 +1,65 @@
+doctype html
+html(lang="ru")
+    - const name = "Список котиков";
+    include head
+    script(src="../../scripts/formConstructor.js")
+    body
+        include authform
+        include header
+        include navigation
+        main.l-main
+            .forms-and-table(style='display: flex; justify-content: space-around;')
+                .cat-forms
+                    .add-cat-form
+                        form#add-cat-form
+                            .form-title Add new cat
+                            .input-container.ic1
+                                input.input-style#name-input(type='text' name='name' placeholder=' ' required='' pattern='[а-яА-Яa-zA-Z]*' minlength='3' maxlength='12')
+                                .cut.cut-short
+                                label.placeholder(for='name-input') Name
+                            .input-container.ic2
+                                label#breed-label(for='breed-select') Breed
+                                select#breed-select(name='breed-selector', required='required')
+                                    each breed in breeds
+                                        option(value=breed.name) #{breed.name}
+                            .input-container
+                                label#picture-label(for="photo-input") Picture (5MB Max)
+                                input#photo-input(type="file", accept="image/png, image/jpg, image/jpeg")
+                            #display-photo
+                            button(type='submit') Add cat
+                            button(type='reset') Clear form
+                    .add-breed-form
+                        form#add-breed-form
+                            .form-title Add new breed
+                            .form-subtitle If you can't find correct breed, add a new one
+                            .input-container.ic1
+                                input.input-style#breed-input(type='text' name='breed' placeholder=' ' required='' pattern='[а-яА-Яa-zA-Z]*' minlength='3' maxlength='20')
+                                .cut.cut-short
+                                label.placeholder(for='breed-input') Breed
+                            button(type='submit') Add breed
+                    .remove-cat-form
+                        form#remove-cat-form
+                            .form-title Remove cat by ID
+                            .input-container.ic1
+                                input.input-style#id-input(type='number' name='ID' placeholder=' ' required='' pattern='[0-9]*')
+                                .cut.cut-short
+                                label.placeholder(for='id-input') ID
+                            button(type='submit') Remove cat
+                .table
+                    table(style="grid-template-columns: minmax(150px, 1fr) minmax(150px, 1fr) minmax(150px, 1fr) minmax(150px, 1fr)")
+                        thead
+                            tr
+                                th Id
+                                th Имя
+                                th Порода
+                                th Фото
+                        tbody
+                            each cat in transfer
+                                tr
+                                    td #{cat.id}
+                                    td #{cat.name}
+                                    td #{cat.breed}
+                                    td
+                                        div(class="photo-item list-photo-item", style=`background-image: url(${cat.data})`)
+        include navigation
+        include footer

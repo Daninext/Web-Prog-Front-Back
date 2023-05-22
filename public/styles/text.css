@@ -1,0 +1,110 @@
+h2 {
+    font-weight: bold;
+}
+
+a {
+    font-family: "Comic Sans MS", serif;
+}
+
+a:link {
+    color: hsla(200, 60%, 30%, 1)
+}
+
+a:visited {
+    color: hsla(200, 60%, 30%, 1)
+}
+
+a:hover {
+    color: #4864F9
+}
+
+.text-logo {
+    color: #4081DB;
+    line-height: .8;
+    padding: 0 15px 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    word-spacing: 1em;
+    font-family: "Comic Sans MS", serif;
+}
+
+.logo h2 > a {
+    text-decoration: none;
+    color: #4081DB;
+}
+
+.hd {
+    margin: 0;
+    padding: 2px;
+    line-height: .8;
+    font-family: "Comic Sans MS", serif;
+}
+
+.nav-items > a {
+    text-decoration: none;
+}
+
+.footer-info {
+    font-family: "Comic Sans MS", serif;
+}
+
+.footer-info-item > h5 {
+    font-weight: bold;
+}
+
+.form-title {
+    font-family: "Comic Sans MS", serif;
+    font-size: 36px;
+    font-weight: 600;
+    color: #0077b6;
+}
+
+.placeholder, #picture-label, #breed-label {
+    color: hsla(200, 60%, 30%, 1);
+    font-family: "Comic Sans MS", serif;
+    line-height: 14px;
+}
+
+.input-style:not(:placeholder-shown) ~ .placeholder {
+    color: hsla(200, 60%, 30%, 1);
+}
+
+.input-style:focus ~ .placeholder {
+    color: #dc2f55;
+}
+
+form button, #logout-button, #login-button, #signup-button, #profile-button {
+    font-family: "Comic Sans MS", serif;
+    color: #eee;
+    font-size: 18px;
+    text-align: center;
+}
+
+.form-subtitle {
+    color: #0077b6;
+    font-family: "Comic Sans MS", serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.greeting {
+    color: hsla(200, 60%, 30%, 1);
+}
+
+.greeting, #logout-button, #login-button, #signup-button, #profile-button {
+    font-family: "Comic Sans MS", serif;
+    font-size: 18px;
+}
+
+.profile p {
+    font-family: "Comic Sans MS", serif;
+    color: #4864F9;
+    font-size: 20px;
+}
+
+.chat p {
+    font-family: "Comic Sans MS", serif;
+    color: #FFFFFF;
+    font-size: 14px;
+}

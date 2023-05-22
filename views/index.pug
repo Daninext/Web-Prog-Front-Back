@@ -1,0 +1,18 @@
+doctype html
+html(lang="ru")
+  - const name = "Мой котейка";
+  include head
+  body()
+    include authform
+    include header
+    include navigation
+    main(class="l-main")
+      .l-content
+        .l-gallery
+          each image in transfer
+            .photo-item(class = "gallery-item gallery-item-is-shadowed", style=`background-image: url(${image.data})`)
+        .l-sidebar
+          p
+            img(src="../../cats/10.jpg")
+    include navigation
+    include footer

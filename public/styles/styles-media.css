@@ -1,0 +1,23 @@
+@media screen and (max-width: 1700px) {
+    .l-sidebar {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .l-gallery {
+        width: 1200px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .l-gallery {
+        width: 900px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .l-gallery {
+        width: 600px;
+    }
+}

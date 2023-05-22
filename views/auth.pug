@@ -1,0 +1,41 @@
+doctype html
+html(lang="ru")
+    - const name = "Авторизация";
+    include head
+    body()
+        include header
+        include navigation
+        main(class="l-main")
+            .l-auth
+                .sing-up
+                    form#sign-up-form
+                        .form-title Registration
+                        .form-subtitle Create new account
+                        .input-container.ic1
+                            input.input-style#sing-up-username-input(type='text' name='username' placeholder=' ')
+                            .cut
+                            label.placeholder(for='sing-up-username-input') Username
+                        .input-container.ic2
+                            input.input-style#sign-up-email-input(type='text' name='email' placeholder=' ')
+                            .cut.cut-short
+                            label.placeholder(for='sign-up-email-input') Email
+                        .input-container.ic2
+                            input.input-style#sign-up-password-input(type='password' name='password' placeholder=' ' minlength='8' maxlength='20')
+                            .cut
+                            label.placeholder(for='sign-up-password-input') Password
+                        button(type='button' onclick='signUpClicked()') Sign up
+                .sing-in
+                    form#sign-in-form
+                        .form-title Authorisation
+                        .form-subtitle Long time
+                        .input-container.ic1
+                            input.input-style#sign-in-email-input(type='text' name='email' placeholder=' ')
+                            .cut.cut-short
+                            label.placeholder(for='sign-in-email-input') Email
+                        .input-container.ic2
+                            input.input-style#sign-in-password-input(type='password' name='password' placeholder=' ')
+                            .cut
+                            label.placeholder(for='sign-in-password-input') Password
+                        button(type='button' onclick='signInClicked()') Sign in
+        include navigation
+        include footer

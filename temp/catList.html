@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="кот, коты, котики, фото, картинки, фото с котиками">
+    <meta name="description" content="Здесь вы можете увидеть много милых котов, а также разместить фото своих">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../public/styles/styles.css" rel="stylesheet">
+    <link href="../public/styles/text.css" rel="stylesheet">
+    <link href="../public/styles/styles-media.css" rel="stylesheet">
+    <link href="../public/styles/text-media.css" rel="stylesheet">
+    <script src="../public/scripts/calcLoadTime.js"></script>
+    <script src="../public/scripts/visualEff.js"></script>
+    <script src="../public/scripts/formConstructor.js"></script>
+    <title>Список котиков</title>
+</head>
+<body>
+  <header class="l-header">
+    <div class="logo">
+      <h2 class="hd">
+        <a href="index.html">
+          <div class="text-logo-is-hor">
+            <span class="text-logo">Мой</span>
+            <div class="text-logo text-logo-is-vert">
+              <span style="font-style: italic">милый</span>
+              <span style="font-style: italic">...</span>
+              <span style="font-style: italic">игривый</span>
+            </div>
+            <span class="text-logo">котик</span>
+          </div>
+        </a>
+      </h2>
+    </div>
+  </header>
+  <nav class="l-nav">
+    <div class="nav-items">
+      <a class="nav-item" href="index.html">Главная</a>
+      <a class="nav-item" href="randomCat.html">Случайный котик</a>
+      <a class="nav-item" href="statistic.html">Статистика</a>
+      <a class="nav-item" href="catList.html">Список</a>
+    </div>
+  </nav>
+
+  <div class="l-cat-form">
+    <div class="cat-forms" style="display: flex; flex-direction: column">
+      <form id="cat-form">
+        <label for="name-input">Имя кота</label>
+        <input type="text" id="name-input" name="catName" placeholder="Имя" required pattern="[а-яА-Яa-zA-Z]*" minlength="3" maxlength="12">
+
+        <label for="breed-input">Порода кота</label>
+        <input type="text" id="breed-input" name="catBreed" placeholder="Порода" required pattern="[а-яА-Яa-zA-Z]*" minlength="3" maxlength="20">
+
+        <button type="submit">Добавить</button>
+        <button type="reset">Очистить форму</button>
+        <button type="button" onclick="clearCats()">Очистить список</button>
+      </form>
+      <br>
+      <form id="id-cat-form">
+        <label for="id-input">ID кота</label>
+        <input type="number" id="id-input" name="catID" placeholder="ID" required pattern="[0-9]*">
+
+        <button type="button" onclick="removeCat()">Удалить кота</button>
+      </form>
+    </div>
+  </div>
+
+  <nav class="l-nav">
+    <div class="nav-items">
+      <a class="nav-item" href="index.html">Главная</a>
+      <a class="nav-item" href="randomCat.html">Случайный котик</a>
+      <a class="nav-item" href="statistic.html">Статистика</a>
+      <a class="nav-item" href="catList.html">Список</a>
+    </div>
+  </nav>
+  <footer class="l-footer">
+    <div class="footer-info">
+      <section class="footer-info-item">
+        <h5>ITMO</h5>
+        <ul>
+          <li>ISU - 312234</li>
+          <li>Email - 312234@niuitmo.ru</li>
+        </ul>
+      </section>
+      <section class="footer-info-item">
+        <h5>Social</h5>
+        <ul>
+          <li>Git - /Daninext</li>
+          <li>VK - /daninext</li>
+        </ul>
+      </section>
+      <article class="footer-info-item">
+        <blockquote>
+          <p>Кошка постарается удержаться на ваших коленях, даже когда вы встаете со стула.<br> До последней минуты она надеется, что у вас проснется совесть и вы сядете обратно.</p>
+          <cite>Кошкина мудрость</cite>
+        </blockquote>
+      </article>
+    </div>
+  </footer>
+</body>
+</html>

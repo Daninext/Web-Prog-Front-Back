@@ -1,0 +1,43 @@
+doctype html
+html(lang="ru")
+    - const name = "Профиль";
+    include head
+    script(src="https://cdn.socket.io/4.3.2/socket.io.min.js")
+    script(src='../../scripts/chat.socket.js')
+    body
+        include authform
+        include header
+        include navigation
+        main(class="l-main")
+            div(style='display: flex; align-items: center; justify-content: space-around;')
+                .profile
+                    p Information
+                    p ID: #{id}
+                    p Username: #{username}
+                    p Cat count: #{catCount}
+                    br
+                    br
+                    form(style='width: 300px')
+                        .form-title New username
+                        .input-container.ic2(style='width: 200px')
+                            input.input-style#new-username-input(type='text' name='username' placeholder=' ')
+                            .cut
+                            label.placeholder(for='new-username-input') Username
+                        button(type='button' onclick='changeUsername()') Change
+                .chat-form
+                    form
+                        .form-title Chat
+                        .form-subtitle#cur-code Current code:
+                        .input-container.ic2
+                            input.input-style#code-input(type='text' name='code' placeholder=' ')
+                            .cut.cut-short
+                            label.placeholder(for='code-input') Code
+                        button(type='button' onclick='join()') Join
+                        button(type='button' onclick='create()') Generate code
+                .chat(style='width: 400px; height: 600px; overflow: auto; background-color: #90e0ef; border-radius: 12px; display: flex; flex-direction: column; justify-content: flex-end;')
+                    #display
+                    #input-field
+                        input#message-input(type='text' name='chat' placeholder='message')
+                        button(type='button' onclick='submitMessage()') Submit
+        include navigation
+        include footer

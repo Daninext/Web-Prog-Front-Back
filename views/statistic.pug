@@ -1,0 +1,21 @@
+doctype html
+html(lang="ru")
+    - const name = "Статистика";
+    include head
+    body
+        include authform
+        include header
+        include navigation
+        div(style="flex-grow: 1")
+            table(style="grid-template-columns: minmax(150px, 1fr) minmax(150px, 1fr)")
+                tr
+                    th Name
+                    th Amount
+                tr
+                    td Users
+                    td #{users}
+                tr
+                    td Cats
+                    td #{cats}
+        include navigation
+        include footer

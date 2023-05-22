@@ -1,0 +1,26 @@
+doctype html
+html(lang="ru")
+    - const name = "Список котиков";
+    include head
+    body
+        include authform
+        include header
+        include navigation
+        main.l-main
+            .table
+                table(style="grid-template-columns: minmax(150px, 1fr) minmax(150px, 1fr) minmax(150px, 1fr)")
+                    thead
+                        tr
+                            th Position
+                            th Path
+                            th Visitors
+                    tbody
+                        - var pos = 0;
+                        each path in paths
+                            - pos += 1;
+                            tr
+                                td #{pos}
+                                td #{path.path}
+                                td #{path.count}
+        include navigation
+        include footer
